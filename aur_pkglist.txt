@@ -1,0 +1,6 @@
+qtile-extras
+ulauncher
+ventoy
+ventoy-debug
+yay
+yay-debug
