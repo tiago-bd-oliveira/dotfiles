@@ -1,2 +1,18 @@
-secret_ssh_backup/
-*.asc
+# ~/.dotfiles/.gitignore
+
+# System junk
+.DS_Store
+*.zwc
+*.pyc
+
+# Secrets (Double check these!)
+.ssh/
+.gnupg/
+.git-credentials
+.env*
+*.p12
+*.pem
+
+# VS Code junk
+.vscode/extensions/
+.vscode/argv.json

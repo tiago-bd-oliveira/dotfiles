@@ -134,6 +134,8 @@ alias ls='eza --icons'
 alias ll='eza -la --icons --git'
 alias lt='eza --tree --level=2 --icons'
 alias autoremove='sudo pacman -Rns $(pacman -Qdtq)'
+alias net-lock="sudo firewall-cmd --panic-on"
+alias net-open="sudo firewall-cmd --panic-off"
 
 # thefuck plugin
 eval $(thefuck --alias)
@@ -148,4 +150,10 @@ if [[ -o interactive ]]; then
     fastfetch
 fi
 
-. "$HOME/.local/bin/env"
+export PATH=$PATH:~/.spicetify
+export PATH=$PATH:~/.spicetify
+
+# Clean up the home directory
+export CARGO_HOME="$HOME/.local/share/cargo"
+export GNUPGHOME="$HOME/.local/share/gnupg"
+export NVM_DIR="$HOME/.local/share/nvm"

@@ -26,7 +26,7 @@
   ],
   "logo": {
     "type": "kitty",
-    "source": "/home/tiago/pictures/pokemon_sprites/*.webp",
+    "source": "/home/tiago/Pictures/pokemon_sprites/*.webp",
     "width": 30, // <--- THIS IS CRITICAL. Forces the image to be 30 chars wide.
     "height": 12, // Height ensures aspect ratio
     "padding": {

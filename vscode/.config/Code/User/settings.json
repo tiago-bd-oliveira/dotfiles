@@ -1,0 +1,16 @@
+{
+  "explorer.confirmDelete": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "workbench.iconTheme": "material-icon-theme",
+  "python.languageServer": "Default",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "chat.mcp.gallery.enabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.formatOnSave": true,
+  "prettier.trailingComma": "none",
+  "security.workspace.trust.untrustedFiles": "open"
+}
