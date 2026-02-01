@@ -1,0 +1,316 @@
+/* Colors mapped from your waybar theme.css
+  main-bg: #11111b | main-fg: #cdd6f4 | main-br: #cdd6f4
+  active-bg: #9399b2 | hover-bg: #313244 | critical: #f38ba8
+*/
+
+* {
+  all: unset;
+  font-family: JetBrainsMono Nerd Font;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.floating-notifications.background .notification-row {
+  padding: 1rem;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  border-radius: 0.5rem;
+  background-color: #11111b; /* main-bg */
+  color: #cdd6f4;           /* main-fg */
+  border: 1px solid #9399b2; /* active-bg used as border */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.critical {
+  border: 1px solid #f38ba8; /* critical */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .summary {
+  margin: 0.5rem;
+  color: #cdd6f4;           /* main-fg */
+  font-weight: bold;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .body {
+  margin: 0.5rem;
+  color: #9399b2;           /* active-bg used for subtle text */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > * {
+  min-height: 3rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action {
+  border-radius: 0.5rem;
+  color: #cdd6f4;           /* main-fg */
+  background-color: #181825; /* workspaces/mantle */
+  border: 1px solid #9399b2;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:hover {
+  background-color: #313244; /* hover-bg */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:active {
+  background-color: #9399b2; /* active-bg */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  color: #11111b;           /* main-bg */
+  background-color: #f38ba8; /* critical */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:hover {
+  color: #cdd6f4;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:active {
+  background-color: #f5e0dc; /* module-fg / rosewater */
+}
+
+.control-center {
+  border-radius: 0.5rem;
+  margin: 1rem;
+  background-color: #11111b; /* main-bg */
+  color: #cdd6f4;           /* main-fg */
+  padding: 1rem;
+  border: 1px solid #9399b2;
+}
+
+.control-center .widget-title {
+  color: #9399b2;           /* active-bg */
+  font-weight: bold;
+}
+
+.control-center .widget-title button {
+  border-radius: 0.5rem;
+  color: #cdd6f4;
+  background-color: #181825;
+  border: 1px solid #9399b2;
+  padding: 0.5rem;
+}
+
+.control-center .widget-title button:hover {
+  background-color: #313244;
+}
+
+.control-center .widget-title button:active {
+  background-color: #9399b2;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #181825;
+  color: #cdd6f4;
+  border: 1px solid #9399b2;
+}
+
+.control-center .notification-row .notification-background .notification {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.critical {
+  border: 1px solid #f38ba8;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content {
+  color: #cdd6f4;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content .summary {
+  margin: 0.5rem;
+  color: #cdd6f4;
+  font-weight: bold;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content .body {
+  margin: 0.5rem;
+  color: #9399b2;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > * {
+  min-height: 3rem;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action {
+  border-radius: 0.5rem;
+  color: #cdd6f4;
+  background-color: #181825;
+  border: 1px solid #9399b2;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:hover {
+  background-color: #313244;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:active {
+  background-color: #9399b2;
+}
+
+.control-center .notification-row .notification-background .close-button {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  color: #11111b;
+  background-color: #f38ba8;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  color: #cdd6f4;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .close-button:active {
+  background-color: #f5e0dc;
+}
+
+progressbar,
+progress,
+trough {
+  border-radius: 0.5rem;
+}
+
+.notification.critical progress {
+  background-color: #f38ba8;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: #89b4fa; /* Keep blue for normal */
+}
+
+trough {
+  background-color: #313244; /* hover-bg */
+}
+
+.control-center trough {
+  background-color: #45475a; /* surface-ish */
+}
+
+.control-center-dnd {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.control-center-dnd slider {
+  background: #313244;
+  border-radius: 0.5rem;
+}
+
+.widget-dnd {
+  color: #9399b2;
+}
+
+.widget-dnd > switch {
+  border-radius: 0.5rem;
+  background: #313244;
+  border: 1px solid #9399b2;
+}
+
+.widget-dnd > switch:checked slider {
+  background: #9399b2;
+}
+
+.widget-dnd > switch slider {
+  background: #45475a;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+}
