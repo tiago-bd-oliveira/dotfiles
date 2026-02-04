@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config="$HOME/.config/rofi/wifi-bluetooth.rasi"
+config="$HOME/.config/rofi/custom-configs/wifi-bluetooth.rasi"
 
 # --- DATA FETCHING (The "Fast" Way) ---
 # Fields: 1:ACTIVE, 2:SIGNAL, 3:SSID, 4:RATE, 5:SECURITY
@@ -21,7 +21,7 @@ get_info() {
     if [ -n "$interface" ]; then
         local ip=$(nmcli -g IP4.ADDRESS device show "$interface" | cut -d/ -f1)
         local rate=$(echo "$wifi_data" | grep '^yes' | cut -d: -f4)
-        [ -n "$ip" ] && echo "󰩟  $ip  |  󰓅  $rate" || echo "󱚼  Offline"
+        [ -n "$ip" ] && echo "󰩟 $ip | 󰓅 $rate" || echo "󱚼  Offline"
     else
         echo "󰂭  No WiFi Device"
     fi
@@ -73,7 +73,7 @@ case "$selected" in
         ;;
     *)
         # --- EXTRACTION ---
-        chosen_ssid=$(echo "$selected" | sed -E 's/^.{6}//; s/  \(.*//' | xargs)
+        chosen_ssid=$(echo "$selected" | sed -E 's/^.{5}//; s/  \(.*//' | xargs)
         security_info=$(echo "$selected" | grep -oP '\(.*\)')
 
         # --- CONNECTION LOGIC ---

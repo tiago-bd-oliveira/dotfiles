@@ -1,0 +1,30 @@
+/* Power Menu - extends base theme */
+
+@theme "base-theme.rasi"
+
+configuration {
+    modi: "dmenu";
+    show-icons: false;
+}
+
+inputbar {
+    enabled: true;
+    padding: 10px 10px 10px 16px;
+    children: [ prompt ];
+}
+
+prompt {
+    text-color: @main-fg;
+    font: "JetBrains Mono Nerd Font Bold 12";
+    width: 100%;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 6;
+}
+
+element {
+    padding: 8px 8px 8px 16px;
+}

@@ -1,0 +1,16 @@
+/* WiFi/Bluetooth Menu - extends base theme */
+
+@theme "base-theme.rasi"
+
+configuration {
+    modi: "dmenu";
+    show-icons: false;
+}
+
+listview {
+    lines: 9;
+}
+
+element {
+    padding: 8px 8px 8px 16px;
+}

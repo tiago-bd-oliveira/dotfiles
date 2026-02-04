@@ -127,7 +127,7 @@ configuration {
 	kb-accept-custom: "Control+Return";
 	kb-accept-custom-alt: "Control+Shift+Return";
 	kb-accept-alt: "Shift+Return";
-	kb-delete-entry: "Shift+Delete";
+	kb-delete-entry: "Delete";
 	kb-mode-next: "Shift+Right,Control+Tab";
 	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
 	kb-mode-complete: "Control+l";
@@ -183,11 +183,8 @@ configuration {
 */
 }
 
-/* Theme - use one from ~/.local/share/rofi/themes/ */
-@theme "/home/tiago/.local/share/rofi/themes/squared-nord.rasi"
-
-/* Optional: Import color scheme from colors/ directory */
-// @import "~/.config/rofi/colors/nord.rasi"
+/* Theme - centralized in custom-configs */
+@theme "~/.config/rofi/custom-configs/base-theme.rasi"
 
 listview {
 	lines:	8;

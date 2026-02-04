@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 
-# Get the selection from rofi
-# awk '{$1=$1; print $0}' strips ALL leading/trailing whitespace and collapses the tab gap
-result=$(cliphist list | awk '{$1=$1; print $0}' | rofi -dmenu  -sort false -p "Clipboard")
+config="$HOME/.config/rofi/custom-configs/clipboard.rasi"
 
-# Exit if nothing was selected (Escape pressed)
-[ -z "$result" ] && exit
+# Get clipboard list, display only content (without ID), but keep ID mapping
+# cliphist list format: <id>\t<content>
+selected=$(cliphist list | rofi -dmenu -sort false -p "Clipboard" -config "${config}" -display-columns 2)
+exit_code=$?
 
-# Handle the custom keybind (Alt+1 or the Delete key depends on rofi config)
-# If you pressed your custom delete key:
-if [ "$?" -eq 10 ]; then
-    echo "$result" | cliphist decode | cliphist delete
-    exec "$0" # Restart the script so the menu stays open
+[ -z "$selected" ] && exit
+
+if [ "$exit_code" -eq 10 ]; then
+    echo "$selected" | cliphist delete
+    exec "$0"
 else
-    # Otherwise, copy the selection
-    echo "$result" | cliphist decode | wl-copy
+    echo "$selected" | cliphist decode | wl-copy
 fi

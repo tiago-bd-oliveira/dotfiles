@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config="$HOME/.config/rofi/wifi-bluetooth.rasi"
+config="$HOME/.config/rofi/custom-configs/wifi-bluetooth.rasi"
 
 # --- DATA FETCHING ---
 get_all_devices() {

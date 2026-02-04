@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Power menu script - wrapper around waybar's logout menu
-config="$HOME/.config/rofi/powermenu.rasi"
+config="$HOME/.config/rofi/custom-configs/powermenu.rasi"
 
 lock="  Lock"
 shutdown="  Shutdown"

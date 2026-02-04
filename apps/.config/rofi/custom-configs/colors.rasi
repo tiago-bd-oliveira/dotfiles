@@ -1,18 +1,7 @@
-/*
- * ROFI POWER MENU - SQUARED CATPPUCCIN MOCHA 
- * Based on your provided Squared Nord configuration
+/* ROFI COLOR SCHEME - CATPPUCCIN MOCHA
+ * Shared color definitions for all rofi configs
  */
 
-@theme "/home/tiago/.local/share/rofi/themes/squared-nord.rasi"
-
-
-configuration {
-    /* We only need dmenu mode for this */
-    modi: "dmenu";
-    show-icons: false;
-}
-
-/* --- THEME DEFINITION --- */
 * {
     /* --- FONTS --- */
     font:   "JetBrains Mono Nerd Font Mono 14";
@@ -34,13 +23,4 @@ configuration {
     margin:     0;
     padding:    0;
     spacing:    0;
-}
-
-
-listview {
-    lines: 9;
-}
-
-element {
-    padding: 8px 8px 8px 16px;
 }
