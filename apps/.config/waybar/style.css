@@ -74,6 +74,7 @@ tooltip label {
 #bluetooth,
 #custom-update,
 #custom-media,
+#custom-hyprsunset,
 #pulseaudio,
 #custom-backlight,
 #battery,
@@ -263,6 +264,15 @@ tooltip label {
   background: @tray;
 }
 #custom-update:hover {
+  color: @hover-fg;
+  text-shadow: none;
+  box-shadow: none;
+}
+#custom-hyprsunset {
+  padding-right: 8px;
+  background: @tray;
+}
+#custom-hyprsunset:hover {
   color: @hover-fg;
   text-shadow: none;
   box-shadow: none;

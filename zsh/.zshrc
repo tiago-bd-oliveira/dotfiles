@@ -137,6 +137,10 @@ alias autoremove='sudo pacman -Rns $(pacman -Qdtq)'
 alias net-lock="sudo firewall-cmd --panic-on"
 alias net-open="sudo firewall-cmd --panic-off"
 
+# blue light filter toggle aliases
+alias sunset-pause="hyprsunset --temperature 6500; (sleep 3600 && hyprsunset) & disown"
+alias sunset-resume="hyprsunset"
+
 # thefuck plugin
 eval $(thefuck --alias)
 

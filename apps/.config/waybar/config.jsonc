@@ -30,6 +30,7 @@
     "custom/right3",
     "clock#date", // date
     "custom/right4",
+    "custom/hyprsunset",
     "custom/wifi", // wi-fi
     "bluetooth", // bluetooth
     "custom/update", // system update
@@ -41,6 +42,7 @@
     "pulseaudio", // output device
     "custom/left7",
     "custom/backlight", // brightness
+
     "custom/left8",
     "battery", // battery
     "custom/leftin2",
@@ -229,6 +231,16 @@
     "min-length": 5,
     "max-length": 35
   },
+
+  "custom/hyprsunset": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 30, // Refresh every 30 seconds
+    "exec": "~/.config/waybar/scripts/sunset.sh",
+    "on-click": "~/.config/waybar/scripts/hyprsunset-toggle.sh", // Toggle on/off
+    "tooltip": true
+  },
+
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 {volume}%",
