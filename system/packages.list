@@ -60,6 +60,7 @@ libwebp-utils
 linux
 linux-firmware
 man-db
+maven
 memtest86+
 mesa-utils
 nano
@@ -125,6 +126,7 @@ ttf-jetbrains-mono-nerd
 unzip
 uv
 uwsm
+valkey
 vim
 vlc
 vlc-gui-skins2
