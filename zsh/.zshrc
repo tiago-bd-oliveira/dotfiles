@@ -164,3 +164,6 @@ export NVM_DIR="$HOME/.local/share/nvm"
 
 # fix man output
 export GROFF_NO_SGR=1
+
+# redis history file
+export REDISCLI_HISTFILE=$HOME/.rediscli_history

@@ -13,5 +13,6 @@
   "editor.formatOnSave": true,
   "prettier.trailingComma": "none",
   "security.workspace.trust.untrustedFiles": "open",
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "python.analysis.typeCheckingMode": "basic"
 }
