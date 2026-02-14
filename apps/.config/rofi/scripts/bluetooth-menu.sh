@@ -6,9 +6,9 @@ config="$HOME/.config/rofi/custom-configs/wifi-bluetooth.rasi"
 get_all_devices() {
     # Use 'devices' without filter to show ALL discovered devices (paired + scanned)
     # This is how rofi-bluetooth detects all available devices
-    bluetoothctl devices | while read -r line; do
-        mac=$(echo "$line" | awk '{print $2}')
-        name=$(echo "$line" | cut -d ' ' -f 3-)
+    bt-device -l | awk "NR>1" | while read -r line; do
+        mac=$(echo "$line" | grep -oP '\([0-9A-F:]+\)$' | tr -d '()')
+        name=$(echo "$line" | sed 's/ *(.*$//' | xargs)
         echo "$mac|$name"
     done
 }
@@ -34,11 +34,11 @@ get_device_icon() {
 }
 
 get_connection_icon() {
-    [[ "$1" == "yes" ]] && echo "󰂱" || echo " "
+    [[ "$1" == "1" ]] && echo "󰂱" || echo " "
 }
 
 get_info() {
-    local connected_devices=$(bluetoothctl devices Connected)
+    local connected_devices=$(bt-device -l)
     if [ -n "$connected_devices" ]; then
         local first_device=$(echo "$connected_devices" | head -1 | cut -d ' ' -f 3-)
         echo "󰂱 Connected: $first_device"
@@ -49,7 +49,7 @@ get_info() {
 
 get_device_list() {
     while IFS='|' read -r mac name; do
-        local device_info=$(bluetoothctl info "$mac")
+        local device_info=$(bt-device -i "$mac")
         local connected=$(echo "$device_info" | grep "Connected:" | awk '{print $2}')
         local icon_type=$(echo "$device_info" | grep "Icon:" | awk '{print $2}')
         local device_icon=$(get_device_icon "$icon_type")
@@ -60,14 +60,14 @@ get_device_list() {
 
 # --- MAIN LOOP ---
 while true; do
-    bt_status=$(bluetoothctl show | grep "Powered:" | awk '{print $2}')
+    bt_status=$(bt-adapter -i | grep "Powered:" | awk '{print $2}')
     info_row=$(get_info)
     enable="󰂯 Enable Bluetooth"
     disable="󰂲 Disable Bluetooth"
     rescan="󰓦 Scan for Devices"
     sep="-----------------DEVICES-----------------"
 
-    if [[ "$bt_status" == "yes" ]]; then
+    if [[ "$bt_status" == "1" ]]; then
         menu="$info_row\n$disable\n$rescan\n$sep\n$(get_device_list)"
     else
         menu="$enable"
@@ -83,35 +83,50 @@ while true; do
 
     case "$selected" in
         "$enable")
-            bluetoothctl power on
+            bt-adapter --set Powered 1
             sleep 1 # Give it a second to initialize
             ;;
         "$disable")
-            bluetoothctl power off
+            bt-adapter --set Powered 0
             ;;
         "$rescan")
             notify-send "Bluetooth" "Scanning..."
             # Scan for 5 seconds in the foreground so the user sees the delay, 
             # then the loop refreshes the list
-            bluetoothctl --timeout 5 scan on
+            timeout 5 bt-adapter -d
             notify-send "Bluetooth" "Scan complete"
             ;;
         *)
-            # Extract device name (after icons and double space)
             device_name=$(echo "$selected" | sed 's/^.*  //')
-            # Look up MAC address by device name
-            device_mac=$(bluetoothctl devices | grep " $device_name$" | awk '{print $2}')
+            device_mac=$(bt-device -l | grep "$device_name" | grep -oP '\([0-9A-F:]+\)$' | tr -d '()')
             
-            connected=$(bluetoothctl info "$device_mac" | grep "Connected:" | awk '{print $2}')
+            if [ -z "$device_mac" ]; then
+                notify-send "Bluetooth" "Error: Could not find device"
+                continue
+            fi
             
-            if [[ "$connected" == "yes" ]]; then
-                bluetoothctl disconnect "$device_mac"
+            connected=$(bt-device -i "$device_mac" | grep "Connected:" | awk '{print $2}')
+            device_path=$(echo "$device_mac" | sed 's/:/_/g')
+            
+            if [[ "$connected" == "1" ]]; then
+                gdbus call --system --dest org.bluez --object-path /org/bluez/hci0/dev_${device_path} --method org.bluez.Device1.Disconnect
                 notify-send "Bluetooth" "Disconnected $device_name"
             else
                 notify-send "Bluetooth" "Connecting to $device_name..."
-                bluetoothctl connect "$device_mac"
+                
+                # Trust and connect via D-Bus
+                gdbus call --system --dest org.bluez --object-path /org/bluez/hci0/dev_${device_path} --method org.freedesktop.DBus.Properties.Set org.bluez.Device1 Trusted "<true>"
+                gdbus call --system --dest org.bluez --object-path /org/bluez/hci0/dev_${device_path} --method org.bluez.Device1.Connect
+                
+                sleep 2
+                new_status=$(bt-device -i "$device_mac" | grep "Connected:" | awk '{print $2}')
+                if [[ "$new_status" == "1" ]]; then
+                    notify-send "Bluetooth" "Connected to $device_name"
+                else
+                    notify-send "Bluetooth" "Failed to connect to $device_name"
+                fi
             fi
-            sleep 1 # Small delay for the status to update before loop refreshes
+            sleep 1
             ;;
     esac
 done
