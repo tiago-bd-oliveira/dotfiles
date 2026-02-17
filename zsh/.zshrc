@@ -125,11 +125,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # custom exports
-export PATH=$PATH:/home/tiago/.spicetify
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # custom alias
-alias spotify="flatpak run com.spotify.Client"
 alias ls='eza --icons'
 alias ll='eza -la --icons --git'
 alias lt='eza --tree --level=2 --icons'
@@ -154,9 +152,6 @@ if [[ -o interactive ]]; then
     fastfetch
 fi
 
-export PATH=$PATH:~/.spicetify
-export PATH=$PATH:~/.spicetify
-
 # Clean up the home directory
 export CARGO_HOME="$HOME/.local/share/cargo"
 export GNUPGHOME="$HOME/.local/share/gnupg"
@@ -167,3 +162,4 @@ export GROFF_NO_SGR=1
 
 # redis history file
 export REDISCLI_HISTFILE=$HOME/.rediscli_history
+export PATH=$PATH:~/.spicetify

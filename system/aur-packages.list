@@ -3,9 +3,12 @@ adwaita-qt6
 anaconda
 antigravity
 auto-cpufreq
+downgrade
 google-chrome
+hyprshutdown
 intellij-idea-ultimate-edition
 iwgtk
+joplin-appimage
 lexend-fonts-git
 lib32-libstdc++5
 mcelog
@@ -15,15 +18,17 @@ nordzy-icon-theme
 onedrive-abraunegg
 overskride
 pinta
+pipes.sh
 python-pywal16
 qtile-extras
 rofi-bluetooth-git
 rofi-wifi-menu-git
 sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
+simplenote-electron-bin
 snx-rs
 snx-rs-debug
-spicetify-cli
+spicetify-cli-git
 spotify
 tela-circle-icon-theme-git
 ttf-ms-fonts
@@ -36,3 +41,4 @@ vlc-pause-click-plugin
 vlsub-git
 yay
 yay-debug
+zen-browser-bin
