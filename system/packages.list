@@ -16,11 +16,13 @@ cava
 cliphist
 compsize
 cpupower
+debootstrap
 dialog
 discord
 docker
 docker-compose
 dolphin
+dpkg
 dunst
 dysk
 efibootmgr

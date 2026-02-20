@@ -14,5 +14,6 @@
   "prettier.trailingComma": "none",
   "security.workspace.trust.untrustedFiles": "open",
   "git.openRepositoryInParentFolders": "never",
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  "git.confirmSync": false
 }
