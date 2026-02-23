@@ -21,7 +21,6 @@ pipes.sh
 python-pywal16
 qtile-extras
 rofi-bluetooth-git
-rofi-wifi-menu-git
 sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
 simplenote-electron-bin
@@ -33,7 +32,6 @@ ttf-ms-fonts
 unixbench
 ventoy
 visual-studio-code-bin
-vlc-arc-dark-git
 vlc-materia-skin-git
 vlc-pause-click-plugin
 vlsub-git
