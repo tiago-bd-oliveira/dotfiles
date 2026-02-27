@@ -1,6 +1,7 @@
 accountsservice
 alsa-utils
 ananicy-cpp
+aws-cli
 base
 base-devel
 bat
@@ -36,6 +37,7 @@ flatpak
 foot
 fwupd
 fzf
+garage
 gimp
 git
 grim
@@ -58,6 +60,9 @@ intel-ucode
 iwd
 jq
 kitty
+kube-proxy
+kubelet
+kubernetes-control-plane-common
 lazydocker
 lf
 lib32-libx11
@@ -137,6 +142,7 @@ supertux
 supertuxkart
 swappy
 swaync
+terraform
 thefuck
 thunar
 tlp
