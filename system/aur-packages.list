@@ -13,6 +13,8 @@ joplin-appimage
 lexend-fonts-git
 lib32-libstdc++5
 mcelog
+mongodb-bin
+mongodb-tools-bin
 mprime
 noisetorch
 nordzy-icon-theme
