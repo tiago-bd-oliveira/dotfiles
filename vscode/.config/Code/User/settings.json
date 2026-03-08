@@ -16,5 +16,8 @@
   "git.openRepositoryInParentFolders": "never",
   "python.analysis.typeCheckingMode": "basic",
   "git.confirmSync": false,
-  "diffEditor.maxComputationTime": 0
+  "diffEditor.maxComputationTime": 0,
+  "editor.unicodeHighlight.allowedCharacters": {
+    " ": true
+  }
 }
