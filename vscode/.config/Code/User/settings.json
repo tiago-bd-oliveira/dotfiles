@@ -9,7 +9,7 @@
   },
   "chat.mcp.gallery.enabled": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "GitHub Dark",
   "editor.formatOnSave": true,
   "prettier.trailingComma": "none",
   "security.workspace.trust.untrustedFiles": "open",
@@ -19,5 +19,11 @@
   "diffEditor.maxComputationTime": 0,
   "editor.unicodeHighlight.allowedCharacters": {
     " ": true
+  },
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
   }
 }
