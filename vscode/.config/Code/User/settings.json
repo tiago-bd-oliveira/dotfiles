@@ -25,5 +25,21 @@
     "other": "on",
     "comments": "off",
     "strings": "off"
+  },
+  "sonarlint.connectedMode.connections.sonarcloud": [
+    {
+      "organizationKey": "pei-securelearning",
+      "connectionId": "pei-securelearning",
+      "region": "EU"
+    }
+  ],
+  "sonarlint.ideLabsEnabled": true,
+  "workbench.panel.showLabels": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript"
   }
 }
