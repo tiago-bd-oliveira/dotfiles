@@ -3,3 +3,11 @@
 [user]
 	email = tiago.oliveira1@ua.pt
 	name = tiago-bd-olveira
+[fetch]
+	prune = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[core]
+	editor = vim

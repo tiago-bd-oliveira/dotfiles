@@ -41,5 +41,7 @@
   "files.associations": {
     "*.tsx": "typescriptreact",
     "*.ts": "typescript"
-  }
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "@azure.argTenant": ""
 }
