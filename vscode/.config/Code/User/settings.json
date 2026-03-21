@@ -43,5 +43,14 @@
     "*.ts": "typescript"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "@azure.argTenant": ""
+  "@azure.argTenant": "",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "hediet.vscode-drawio.resizeImages": null,
+  "sonarlint.focusOnNewCode": false,
+  "explorer.confirmDragAndDrop": false
 }

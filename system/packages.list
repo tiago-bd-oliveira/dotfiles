@@ -42,6 +42,7 @@ fzf
 garage
 gimp
 git
+github-cli
 grim
 grub
 gst-plugin-pipewire
@@ -110,10 +111,8 @@ powertop
 profile-sync-daemon
 qbittorrent
 qemu-base
-qt5-3d
 qt5-graphicaleffects
 qt5-imageformats
-qt5-location
 qt5-multimedia
 qt5-networkauth
 qt5-quickcontrols

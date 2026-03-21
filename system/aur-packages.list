@@ -16,6 +16,7 @@ lighthouse
 mcelog
 mongodb-bin
 mongodb-tools-bin
+mongosh-bin-debug
 mprime
 noisetorch
 nordzy-icon-theme
@@ -23,6 +24,8 @@ onedrive-abraunegg
 pinta
 pipes.sh
 python-pywal16
+qt5-3d
+qt5-location
 qtile-extras
 rofi-bluetooth-git
 sddm-sugar-candy-git
