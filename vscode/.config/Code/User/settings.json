@@ -52,5 +52,6 @@
   },
   "hediet.vscode-drawio.resizeImages": null,
   "sonarlint.focusOnNewCode": false,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "chat.viewSessions.orientation": "stacked"
 }
