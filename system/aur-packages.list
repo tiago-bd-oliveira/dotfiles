@@ -3,6 +3,7 @@ adwaita-qt6
 anaconda
 antigravity
 auto-cpufreq
+broken-link-checker
 downgrade
 etcd
 google-chrome
@@ -35,6 +36,7 @@ snx-rs
 spicetify-cli
 spotify
 tela-circle-icon-theme-git
+tint
 ttf-ms-fonts
 unixbench
 ventoy

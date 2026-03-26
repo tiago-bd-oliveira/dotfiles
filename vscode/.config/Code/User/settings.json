@@ -53,5 +53,8 @@
   "hediet.vscode-drawio.resizeImages": null,
   "sonarlint.focusOnNewCode": false,
   "explorer.confirmDragAndDrop": false,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
