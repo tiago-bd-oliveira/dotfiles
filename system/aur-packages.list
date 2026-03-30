@@ -1,9 +1,13 @@
+2048-cli-git
 adwaita-qt5
 adwaita-qt6
 anaconda
 antigravity
 auto-cpufreq
+bastet
 broken-link-checker
+cassandra
+claude-code
 downgrade
 etcd
 google-chrome
@@ -17,7 +21,6 @@ lighthouse
 mcelog
 mongodb-bin
 mongodb-tools-bin
-mongosh-bin-debug
 mprime
 noisetorch
 nordzy-icon-theme

@@ -12,6 +12,7 @@ bluez-tools
 bluez-utils
 breeze
 brightnessctl
+bsd-games
 btop
 btrfs-progs
 cava
@@ -61,6 +62,7 @@ imv
 intel-media-driver
 intel-ucode
 iwd
+jdk11-openjdk
 jq
 kitty
 kube-proxy
@@ -88,6 +90,7 @@ mesa-utils
 mpv
 nano
 net-tools
+nethack
 network-manager-applet
 networkmanager
 noto-fonts-emoji
@@ -101,6 +104,7 @@ otf-commit-mono-nerd
 pacman-contrib
 pamixer
 pavucontrol
+perl-geoip
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -147,6 +151,7 @@ swaync
 terraform
 thefuck
 thunar
+tint2
 tlp
 tlp-rdw
 ttf-jetbrains-mono-nerd
