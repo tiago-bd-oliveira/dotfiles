@@ -32,6 +32,8 @@ qt5-3d
 qt5-location
 qtile-extras
 rofi-bluetooth-git
+rofi-wifi
+rofi-wifi-menu-git
 sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
 simplenote-electron-bin
