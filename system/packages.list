@@ -2,6 +2,7 @@ accountsservice
 act
 alsa-utils
 ananicy-cpp
+autoconf-archive
 aws-cli
 base
 base-devel
@@ -27,6 +28,8 @@ discord
 docker
 docker-compose
 dolphin
+dotnet-sdk
+dotnet-targeting-pack
 dpkg
 dunst
 dysk
@@ -44,6 +47,7 @@ garage
 gimp
 git
 github-cli
+go
 grim
 grub
 gst-plugin-pipewire
@@ -61,6 +65,7 @@ hyprsunset
 imv
 intel-media-driver
 intel-ucode
+intltool
 iwd
 jdk11-openjdk
 jq
@@ -135,6 +140,7 @@ qt6-wayland
 qt6ct
 reflector
 rofi
+rust
 sddm
 shotwell
 sl
