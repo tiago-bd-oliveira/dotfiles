@@ -30,6 +30,7 @@ pipes.sh
 python-pywal16
 qt5-3d
 qt5-location
+qt5-sensors
 qtile-extras
 rofi-bluetooth-git
 rofi-wifi
@@ -50,6 +51,7 @@ vlc-materia-skin-git
 vlc-pause-click-plugin
 vlsub-git
 vtop
+webkit2gtk
 yay
 yay-debug
 zen-browser-bin

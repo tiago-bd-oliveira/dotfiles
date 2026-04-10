@@ -1,4 +1,5 @@
 accountsservice
+acpica
 act
 alsa-utils
 ananicy-cpp
@@ -17,9 +18,12 @@ bsd-games
 btop
 btrfs-progs
 cava
+cdrtools
 chromium
+chrpath
 cliphist
 compsize
+cpio
 cpupower
 ctop
 debootstrap
@@ -44,6 +48,7 @@ foot
 fwupd
 fzf
 garage
+gemini-cli
 gimp
 git
 github-cli
@@ -69,6 +74,7 @@ intltool
 iwd
 jdk11-openjdk
 jq
+kernel-headers-musl
 kitty
 kube-proxy
 kubelet
@@ -81,6 +87,7 @@ lib32-libxcb
 lib32-libxdmcp
 lib32-nss
 lib32-pam
+libguestfs
 libpulse
 libreoffice-fresh
 libva-intel-driver
@@ -92,8 +99,11 @@ man-db
 maven
 memtest86+
 mesa-utils
+mise
 mpv
+musl
 nano
+nasm
 net-tools
 nethack
 network-manager-applet
@@ -127,7 +137,6 @@ qt5-networkauth
 qt5-quickcontrols
 qt5-quickcontrols2
 qt5-script
-qt5-sensors
 qt5-serialport
 qt5-speech
 qt5-tools
@@ -175,7 +184,6 @@ vulkan-nouveau
 vulkan-radeon
 waybar
 wdisplays
-webkit2gtk
 wev
 wget
 wireless_tools
