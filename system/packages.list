@@ -128,6 +128,7 @@ polkit-gnome
 polkit-kde-agent
 powertop
 profile-sync-daemon
+python-pipx
 qbittorrent
 qemu-base
 qt5-graphicaleffects
@@ -163,6 +164,7 @@ supertux
 supertuxkart
 swappy
 swaync
+tcpdump
 terraform
 thefuck
 thunar
