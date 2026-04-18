@@ -5,6 +5,7 @@ alsa-utils
 ananicy-cpp
 autoconf-archive
 aws-cli
+bandwhich
 base
 base-devel
 bat
@@ -17,6 +18,7 @@ brightnessctl
 bsd-games
 btop
 btrfs-progs
+buildkit
 cava
 cdrtools
 chromium
@@ -30,6 +32,7 @@ debootstrap
 dialog
 discord
 docker
+docker-buildx
 docker-compose
 dolphin
 dotnet-sdk
@@ -153,6 +156,7 @@ qt6ct
 reflector
 rofi
 rust
+rustscan
 sddm
 shotcut
 shotwell
@@ -161,6 +165,7 @@ slurp
 smartmontools
 snap-pac
 snapper
+sniffnet
 sof-firmware
 stow
 supertux
