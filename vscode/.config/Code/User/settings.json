@@ -63,6 +63,7 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "javascript": true
+    "javascript": true,
+    "typescriptreact": true
   }
 }
