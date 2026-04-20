@@ -42,7 +42,7 @@
     "*.tsx": "typescriptreact",
     "*.ts": "typescript"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "vscode.typescript-language-features",
   "@azure.argTenant": "",
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
