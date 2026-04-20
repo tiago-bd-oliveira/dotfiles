@@ -65,5 +65,7 @@
     "scminput": false,
     "javascript": true,
     "typescriptreact": true
-  }
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.productIconTheme": "fluent-icons"
 }
