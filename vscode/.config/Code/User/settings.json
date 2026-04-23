@@ -64,8 +64,10 @@
     "markdown": false,
     "scminput": false,
     "javascript": true,
-    "typescriptreact": true
+    "typescriptreact": true,
+    "python": true
   },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "workbench.productIconTheme": "fluent-icons"
+  "workbench.productIconTheme": "fluent-icons",
+  "notebook.output.scrolling": true
 }
