@@ -69,5 +69,7 @@
   },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "workbench.productIconTheme": "fluent-icons",
-  "notebook.output.scrolling": true
+  "notebook.output.scrolling": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }

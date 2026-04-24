@@ -78,6 +78,7 @@ iwd
 jdk11-openjdk
 jdk21-openjdk
 jq
+jupyterlab
 kernel-headers-musl
 kitty
 kooha
