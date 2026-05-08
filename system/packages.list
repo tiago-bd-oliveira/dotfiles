@@ -3,6 +3,7 @@ acpica
 act
 alsa-utils
 ananicy-cpp
+asciiquarium
 autoconf-archive
 aws-cli
 bandwhich
@@ -44,6 +45,7 @@ efibootmgr
 exfatprogs
 eza
 fastfetch
+file-roller
 firefox
 firewalld
 flatpak
@@ -114,6 +116,7 @@ net-tools
 nethack
 network-manager-applet
 networkmanager
+nmap
 noto-fonts-emoji
 npm
 ntfs-3g

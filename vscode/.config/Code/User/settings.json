@@ -9,7 +9,7 @@
   },
   "chat.mcp.gallery.enabled": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Light Modern",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
   "editor.formatOnSave": true,
   "prettier.trailingComma": "none",
   "security.workspace.trust.untrustedFiles": "open",
