@@ -9,7 +9,6 @@ broken-link-checker
 claude-code
 downgrade
 etcd
-hyprshutdown
 intellij-idea-ultimate-edition
 iwgtk
 joplin-appimage
@@ -38,7 +37,8 @@ sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
 simplenote-electron-bin
 snx-rs
-spicetify-cli
+spicetify-bin
+spicetify-marketplace-bin
 spotify
 tela-circle-icon-theme-git
 tint-tetris
@@ -50,7 +50,6 @@ vlc-materia-skin-git
 vlc-pause-click-plugin
 vlsub-git
 vtop
-webkit2gtk
 yay
 yay-debug
 zen-browser-bin
