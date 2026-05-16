@@ -8,7 +8,6 @@ bastet
 broken-link-checker
 claude-code
 downgrade
-etcd
 intellij-idea-ultimate-edition
 iwgtk
 joplin-appimage
@@ -37,6 +36,8 @@ sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
 simplenote-electron-bin
 snx-rs
+sonar-scanner
+sonarqube-bin
 spicetify-bin
 spicetify-marketplace-bin
 spotify

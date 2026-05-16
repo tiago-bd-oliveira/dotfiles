@@ -42,6 +42,7 @@ dpkg
 dunst
 dysk
 efibootmgr
+etcd
 exfatprogs
 eza
 fastfetch
@@ -113,6 +114,7 @@ mpv
 musl
 nano
 nasm
+neovim
 net-tools
 nethack
 network-manager-applet
