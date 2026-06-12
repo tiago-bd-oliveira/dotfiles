@@ -160,3 +160,18 @@ export GROFF_NO_SGR=1
 # redis history file
 export REDISCLI_HISTFILE=$HOME/.rediscli_history
 export PATH=$PATH:~/.spicetify
+
+# fnm
+FNM_PATH="/home/tiago/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
+
+# pnpm
+export PNPM_HOME="/home/tiago/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end

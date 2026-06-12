@@ -3,6 +3,7 @@ acpica
 act
 alsa-utils
 ananicy-cpp
+android-udev
 asciiquarium
 autoconf-archive
 aws-cli
@@ -25,6 +26,7 @@ cdrtools
 chromium
 chrpath
 cliphist
+cmatrix
 compsize
 cpio
 cpupower
@@ -50,7 +52,6 @@ file-roller
 firefox
 firewalld
 flatpak
-foot
 fwupd
 fzf
 garage
@@ -86,9 +87,11 @@ jupyterlab
 kernel-headers-musl
 kitty
 kooha
+krita
 kube-proxy
 kubelet
 kubernetes-control-plane-common
+kvantum
 lazydocker
 lf
 lib32-libx11
