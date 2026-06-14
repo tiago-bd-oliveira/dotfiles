@@ -21,6 +21,7 @@ bsd-games
 btop
 btrfs-progs
 buildkit
+caligula
 cava
 cdrtools
 chromium
@@ -60,6 +61,7 @@ gimp
 git
 github-cli
 go
+gpick
 grim
 grub
 gst-plugin-pipewire
@@ -127,6 +129,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 nwg-look
+nyancat
 obsidian
 opencode
 os-prober
@@ -143,6 +146,7 @@ polkit-gnome
 polkit-kde-agent
 powertop
 pre-commit
+prismlauncher
 profile-sync-daemon
 python-pipx
 qbittorrent
@@ -183,6 +187,7 @@ supertux
 supertuxkart
 swappy
 swaync
+task
 tcpdump
 terraform
 thefuck
