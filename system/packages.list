@@ -31,6 +31,7 @@ cmatrix
 compsize
 cpio
 cpupower
+cronie
 ctop
 debootstrap
 dialog
@@ -38,7 +39,6 @@ discord
 docker
 docker-buildx
 docker-compose
-dolphin
 dotnet-sdk
 dotnet-targeting-pack
 dpkg
@@ -119,6 +119,7 @@ mpv
 musl
 nano
 nasm
+ncdu
 neovim
 net-tools
 nethack
@@ -195,6 +196,7 @@ thunar
 thunderbird
 tlp
 tlp-rdw
+trash-cli
 ttf-jetbrains-mono-nerd
 udiskie
 unzip
