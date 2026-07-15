@@ -46,6 +46,7 @@ dunst
 dysk
 efibootmgr
 etcd
+ex-vi-compat
 exfatprogs
 eza
 fastfetch
@@ -60,6 +61,7 @@ gemini-cli
 gimp
 git
 github-cli
+gnome-calculator
 go
 gpick
 grim
@@ -104,7 +106,6 @@ lib32-nss
 lib32-pam
 libguestfs
 libpulse
-libreoffice-fresh
 libva-intel-driver
 libvips
 libwebp-utils
