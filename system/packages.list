@@ -21,6 +21,7 @@ bsd-games
 btop
 btrfs-progs
 buildkit
+cabextract
 caligula
 cava
 cdrtools
@@ -29,6 +30,7 @@ chrpath
 cliphist
 cmatrix
 compsize
+cowsay
 cpio
 cpupower
 cronie
@@ -54,6 +56,7 @@ file-roller
 firefox
 firewalld
 flatpak
+fortune-mod
 fwupd
 fzf
 garage
@@ -111,6 +114,7 @@ libvips
 libwebp-utils
 linux
 linux-firmware
+lolcat
 man-db
 maven
 memtest86+
@@ -146,6 +150,7 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 polkit-kde-agent
+ponysay
 powertop
 pre-commit
 prismlauncher

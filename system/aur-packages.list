@@ -44,7 +44,7 @@ simplenote-electron-bin
 snx-rs
 sonar-scanner
 sonarqube-bin
-spicetify-bin
+spicetify-cli
 spicetify-marketplace-bin
 spotify
 switcheroo-bin
@@ -59,6 +59,7 @@ vlc-materia-skin-git
 vlc-pause-click-plugin
 vlsub-git
 vtop
+wlogout
 yay
 zen-browser-bin
 zotero
