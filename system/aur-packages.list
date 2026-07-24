@@ -6,6 +6,7 @@ auto-cpufreq
 bastet
 broken-link-checker
 cbonsai
+cheese
 claude-code
 downgrade
 hypr-bin
@@ -18,6 +19,7 @@ lighthouse
 localsend-bin
 logseq-desktop
 mcelog
+megasync
 mongodb-tools-bin
 mprime
 neo4j-community-bin
@@ -41,6 +43,7 @@ rofi-wifi-menu-git
 sddm-sugar-candy-git
 sddm-theme-sugar-candy-git
 simplenote-electron-bin
+sni-qt
 snx-rs
 sonar-scanner
 sonarqube-bin
