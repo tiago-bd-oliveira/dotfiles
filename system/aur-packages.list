@@ -28,10 +28,13 @@ nsnake
 onedrive-abraunegg
 onlyoffice-bin
 pandoc-bin
-pinta
 pipes.sh
 postman-bin
+python-google-cloud-speech
+python-markitdown
+python-markitdown-mcp
 python-pywal16
+python-speechrecognition
 qt5-3d
 qt5-location
 qt5-sensors
