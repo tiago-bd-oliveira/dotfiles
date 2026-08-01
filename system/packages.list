@@ -28,7 +28,7 @@ cava
 cdrtools
 chromium
 chrpath
-claude-desktop-bin
+claude-desktop-extra
 cliphist
 cmatrix
 compsize
@@ -147,6 +147,7 @@ otf-commit-mono-nerd
 pacman-contrib
 pamixer
 pavucontrol
+pcmanfm
 perl-geoip
 pinta
 pipewire

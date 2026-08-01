@@ -4,6 +4,7 @@ adwaita-qt6
 anaconda
 auto-cpufreq
 bastet
+bitwarden-bin
 broken-link-checker
 cbonsai
 cheese
@@ -19,6 +20,7 @@ lighthouse
 localsend-bin
 logseq-desktop
 mcelog
+megacmd
 mongodb-tools-bin
 mprime
 neo4j-community-bin
