@@ -278,7 +278,7 @@ hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/clipboard.sh"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/wifi-menu.sh"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/bluetooth-menu.sh"))
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/powermenu.sh"))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("wleave"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a")) -- color picker
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))

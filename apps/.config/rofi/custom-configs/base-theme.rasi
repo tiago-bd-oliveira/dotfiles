@@ -3,6 +3,7 @@
  */
 
 @import "colors.rasi"
+@import "~/.cache/wal/colors-rofi.rasi"
 
 window {
     location:   center;
