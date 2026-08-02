@@ -216,9 +216,9 @@
     "return-type": "json",
     "format": "{}",
     "on-click": "~/.config/waybar/scripts/system-update.sh up",
-    "interval": 60,
+    "interval": 900,
     "tooltip": true,
-    "signal": 20, // I'm not sure what this does
+    "signal": 20, // re-runs exec on SIGRTMIN+20 (sent when an update finishes)
     "min-length": 1,
     "max-length": 1
   },
