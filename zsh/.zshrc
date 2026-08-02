@@ -146,6 +146,26 @@ alias sunset-resume="hyprsunset"
 # thefuck plugin
 eval $(thefuck --alias)
 
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+ZSH_HIGHLIGHT_STYLES[command]='fg=112,bold'              # valid command — green
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=112,bold'               # shell builtins (cd, export) — same green
+ZSH_HIGHLIGHT_STYLES[function]='fg=112,bold'               # defined functions — same green
+ZSH_HIGHLIGHT_STYLES[alias]='fg=112,bold'                   # aliases — same green
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=203,bold'           # command not found — red
+
+ZSH_HIGHLIGHT_STYLES[path]='fg=110'                         # file paths — soft blue
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=110'
+
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=222'       # 'strings' — warm yellow
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=222'       # "strings" — warm yellow
+
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=141'         # -flag — violet
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=141'         # --flag — violet
+
+ZSH_HIGHLIGHT_STYLES[comment]='fg=244'                      # # comments — muted gray
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=214,bold'             # > and >> — orange
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -175,3 +195,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh

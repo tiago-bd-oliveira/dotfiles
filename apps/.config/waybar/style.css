@@ -5,7 +5,8 @@
   min-height: 0;
 }
 
-@import "theme.css";
+/* @import "theme.css"; */
+@import url("file:///home/tiago/.cache/wal/colors-waybar.css");
 
 /* === Main Background === */
 

@@ -185,6 +185,7 @@ configuration {
 
 /* Theme - centralized in custom-configs */
 @theme "~/.config/rofi/custom-configs/base-theme.rasi"
+@import "~/.cache/wal/colors-rofi.rasi"
 
 listview {
 	lines:	8;
