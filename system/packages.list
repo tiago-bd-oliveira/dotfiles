@@ -43,6 +43,7 @@ discord
 docker
 docker-buildx
 docker-compose
+dolphin
 dotnet-sdk
 dotnet-targeting-pack
 dpkg
@@ -168,6 +169,7 @@ python-mcp
 python-pipx
 qbittorrent
 qemu-base
+qemu-full
 qt5-graphicaleffects
 qt5-imageformats
 qt5-multimedia

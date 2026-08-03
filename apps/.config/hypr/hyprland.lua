@@ -55,6 +55,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("~/.config/hypr/scripts/apply-wal-on-boot.sh")
 
     hl.exec_cmd("hypridle")
     hl.exec_cmd("~/.config/hypr/scripts/cleanup_downloads.sh")
@@ -114,6 +115,9 @@ hl.config({
         gaps_out = 10,
 
         border_size = 2,
+
+        border_size = 2,
+
 
 
 
@@ -383,17 +387,6 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
-    name = "fix-megasync-input",
-    match = {
-        class    = "^(megasync)$",
-        xwayland = true,
-    },
-
-    no_focus = false,
-})
-
-
 -- Extension floating windows
 hl.window_rule({
     name = "float-extension-windows",
@@ -402,4 +395,16 @@ hl.window_rule({
     float = true,
     -- activatefocus = true,
     no_anim = true,
+})
+
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
+    },
+})
+
+hl.layer_rule({
+    match = { namespace = "wleave" },
+    blur = true,
+    ignore_alpha = 0.2,
 })
