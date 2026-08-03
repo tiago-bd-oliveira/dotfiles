@@ -55,7 +55,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("~/.config/hypr/scripts/apply-wal-on-boot.sh")
+
     hl.exec_cmd("hypridle")
     hl.exec_cmd("~/.config/hypr/scripts/cleanup_downloads.sh")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
@@ -114,6 +114,8 @@ hl.config({
         gaps_out = 10,
 
         border_size = 2,
+
+
 
         -- https://wiki.hypr.land/Configuring/Basics/Variables/#variable-types for info about colors
         col = {
@@ -391,11 +393,6 @@ hl.window_rule({
     no_focus = false,
 })
 
-hl.config({
-    xwayland = {
-        force_zero_scaling = true,
-    },
-})
 
 -- Extension floating windows
 hl.window_rule({
