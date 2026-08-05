@@ -22,7 +22,10 @@
     "disk",
     "localip",
     "battery",
-    "media"
+    {
+  	"type": "media",
+  	"format": "{artist} - {title}"
+    }
   ],
   "logo": {
     "type": "kitty",
