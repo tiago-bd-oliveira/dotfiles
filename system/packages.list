@@ -158,6 +158,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+plocate
 polkit-gnome
 polkit-kde-agent
 ponysay
@@ -258,6 +259,7 @@ wget
 wireless_tools
 wireplumber
 wlr-randr
+wmctrl
 woff2-font-awesome
 wofi
 xdg-desktop-portal-gtk
