@@ -179,7 +179,6 @@ export GROFF_NO_SGR=1
 
 # redis history file
 export REDISCLI_HISTFILE=$HOME/.rediscli_history
-export PATH=$PATH:~/.spicetify
 
 # fnm
 FNM_PATH="/home/tiago/.local/share/fnm"
