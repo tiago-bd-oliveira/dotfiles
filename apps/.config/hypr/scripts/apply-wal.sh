@@ -28,13 +28,18 @@ python3 "$ENGINE" "$WALLPAPER"
 # works without remote control enabled.
 pkill -SIGUSR1 kitty 2>/dev/null || true
 
-# Waybar: restart to pick up colors-waybar.css
-pkill -SIGUSR2 waybar 2>/dev/null || {
-    pkill waybar 2>/dev/null || true
-    sleep 0.2
+# Waybar: nothing to do when it's already running. "reload_style_on_change" in
+# config.jsonc has it watching style.css and the files style.css imports, so the
+# colors-waybar.css written above already swapped the CSS provider in place — no
+# SIGUSR2, no bar teardown, no flicker. (SIGUSR2 would recreate every bar and
+# layer surface, which is the visible restart we're avoiding.)
+# Only start it if it isn't up yet, and only from inside a Wayland session —
+# the systemd timer path has no display, and spawning there just logs
+# "cannot open display".
+if ! pgrep -x waybar >/dev/null 2>&1 && [[ -n "${WAYLAND_DISPLAY:-}" ]]; then
     waybar &
     disown
-}
+fi
 
 # Rofi: no reload needed, it reads its theme fresh on every launch
 
