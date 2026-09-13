@@ -21,6 +21,7 @@ iwgtk
 joplin-appimage
 lexend-fonts-git
 lib32-libstdc++5
+lib32-pam
 lighthouse
 localsend-bin
 logseq-desktop
@@ -45,6 +46,7 @@ python-speechrecognition
 qt5-3d
 qt5-location
 qt5-sensors
+qt5-virtualkeyboard
 qtile-extras
 rofi-bluetooth-git
 rofi-wifi

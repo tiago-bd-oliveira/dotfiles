@@ -23,6 +23,7 @@ btop
 btrfs-progs
 buildkit
 cabextract
+calibre
 caligula
 cava
 ccid
@@ -114,7 +115,6 @@ lib32-libxau
 lib32-libxcb
 lib32-libxdmcp
 lib32-nss
-lib32-pam
 libguestfs
 libpulse
 libva-intel-driver
@@ -182,7 +182,6 @@ qt5-script
 qt5-serialport
 qt5-speech
 qt5-tools
-qt5-virtualkeyboard
 qt5-wayland
 qt5-xmlpatterns
 qt5ct
