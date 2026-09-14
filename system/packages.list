@@ -75,11 +75,13 @@ github-cli
 gnome-calculator
 gnome-keyring
 go
+gphoto2
 gpick
 grim
 grub
 gst-plugin-pipewire
 gvfs
+gvfs-mtp
 hdparm
 htop
 hypridle
@@ -163,6 +165,7 @@ plocate
 polkit-gnome
 polkit-kde-agent
 ponysay
+postgis
 powertop
 pre-commit
 prismlauncher
@@ -172,6 +175,7 @@ python-pipx
 qbittorrent
 qemu-base
 qemu-full
+qgis
 qt5-graphicaleffects
 qt5-imageformats
 qt5-multimedia
