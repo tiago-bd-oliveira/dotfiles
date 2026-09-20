@@ -33,7 +33,7 @@ get_aur_helper() {
 
 get_aur_helper
 export -f pkg_installed
-flatpak_update_cmd="pkg_installed flatpak && flatpak update"
+flatpak_update_cmd="pkg_installed flatpak && flatpak update -y"
 
 # --- UPDATE CHECKS ---
 # Each of these hits the network (AUR RPC, mirror db sync, flatpak remotes)
@@ -79,7 +79,7 @@ if [ "$1" == "up" ]; then
     trap 'pkill -RTMIN+20 waybar' EXIT
     command="
       $0 upgrade
-      ${aur_helper} -Syu
+      ${aur_helper} -Syu --noconfirm
       $flatpak_update_cmd
 
       printf '\n--- Updating package lists ---\n'
