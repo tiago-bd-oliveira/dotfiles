@@ -37,6 +37,6 @@
       "left": 2
     },
     "preserveAspectRatio": true,
-    "recache": true
+    "cache": true
   }
 }
