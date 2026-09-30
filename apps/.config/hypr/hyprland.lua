@@ -23,10 +23,18 @@ hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "preferred",
     position = "auto-center-up",
     scale    = "auto",
+})
+
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "auto-center-up",
+    scale    = "auto",
+    mirror   = "eDP-1"
 })
 
 ---------------------
@@ -55,7 +63,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("~/.config/hypr/scripts/apply-wal-on-boot.sh")
 
     hl.exec_cmd("hypridle")
     hl.exec_cmd("~/.config/hypr/scripts/cleanup_downloads.sh")
@@ -113,6 +120,8 @@ hl.config({
     general = {
         gaps_in = 5,
         gaps_out = 10,
+
+        border_size = 2,
 
         border_size = 2,
 
@@ -391,20 +400,14 @@ hl.window_rule({
 hl.window_rule({
     name = "float-extension-windows",
     match = { title = "^(Extension:.*)$" },
+})
+
+-- Extension floating windows
+hl.window_rule({
+    name = "float-extension-windows",
+    match = { title = "^(Extension:.*)$" },
 
     float = true,
     -- activatefocus = true,
     no_anim = true,
-})
-
-hl.config({
-    xwayland = {
-        force_zero_scaling = true,
-    },
-})
-
-hl.layer_rule({
-    match = { namespace = "wleave" },
-    blur = true,
-    ignore_alpha = 0.2,
 })
