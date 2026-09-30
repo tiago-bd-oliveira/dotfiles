@@ -22,20 +22,34 @@ hl.env("QT_STYLE_OVERRIDE", "kvantum")
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "eDP-1",
-    mode     = "preferred",
-    position = "auto-center-up",
-    scale    = "auto",
-})
-
+-- Explicit positions so the edges actually touch (positions are in logical px).
+-- External 1920x1080 @1x sits at the origin; the laptop (2560x1600 @1.6 = 1600x1000
+-- logical) is centered below it: x = (1920 - 1600) / 2 = 160, y = 1080.
 hl.monitor({
     output   = "HDMI-A-1",
     mode     = "preferred",
-    position = "auto-center-up",
-    scale    = "auto",
-    mirror   = "eDP-1"
+    position = "0x0",
+    scale    = 1,
 })
+
+hl.monitor({
+    output   = "eDP-1",
+    mode     = "preferred",
+    position = "160x1080",
+    scale    = 1.6,
+})
+
+local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+
+local mirroring = false
+hl.bind(mainMod .. " + M", function()
+  mirroring = not mirroring
+  if mirroring then
+    hl.monitor({ output = "HDMI-A-1", mode = "preferred", position = "0x0", scale = 1, mirror = "eDP-1" })
+  else
+    hl.monitor({ output = "HDMI-A-1", mode = "preferred", position = "0x0", scale = 1, mirror = "" })
+  end
+end)
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -286,7 +300,6 @@ hl.device({
 ---------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Binds/
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
