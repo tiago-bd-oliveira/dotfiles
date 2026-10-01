@@ -91,8 +91,7 @@ if [ "$1" == "up" ]; then
       printf '\n--- Cleaning up ---\n'
       flatpak uninstall --unused -y
       sudo paccache -r -k 2
-      printf '\n'
-      read -n 1 -p 'Done! Press any key to close...'
+      printf '\nDone!'
       "
     kitty --title "󰞒  System Update & Cleanup" sh -c "${command}"
     exit 0
