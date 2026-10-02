@@ -57,7 +57,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
@@ -65,7 +65,7 @@
     "scminput": false,
     "javascript": true,
     "typescriptreact": true,
-    "python": true
+    "python": false
   },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "workbench.productIconTheme": "fluent-icons",
