@@ -81,5 +81,6 @@
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml"
   ],
-  "claudeCode.hideOnboarding": true
+  "claudeCode.hideOnboarding": true,
+  "csv.maxFileSizeMB": 0
 }
