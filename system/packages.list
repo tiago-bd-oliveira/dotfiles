@@ -102,6 +102,7 @@ intltool
 iwd
 jdk11-openjdk
 jdk21-openjdk
+jdk25-openjdk
 jq
 jupyterlab
 kernel-headers-musl
@@ -144,9 +145,11 @@ nethack
 network-manager-applet
 networkmanager
 nmap
+nodejs
 noto-fonts-emoji
 npm
 ntfs-3g
+nvm
 nwg-look
 nyancat
 obsidian
@@ -208,6 +211,7 @@ snap-pac
 snapper
 sniffnet
 sof-firmware
+steam
 stow
 supertux
 supertuxkart
