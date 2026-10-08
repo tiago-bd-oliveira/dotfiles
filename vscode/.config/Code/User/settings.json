@@ -83,5 +83,6 @@
   ],
   "claudeCode.hideOnboarding": true,
   "csv.maxFileSizeMB": 0,
-  "java.configuration.runtimes": []
+  "java.configuration.runtimes": [],
+  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
 }
