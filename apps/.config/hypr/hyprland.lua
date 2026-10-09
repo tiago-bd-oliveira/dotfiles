@@ -103,6 +103,7 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
 -----------------------
 ----- PERMISSIONS -----
@@ -255,6 +256,13 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,  -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
+    },
+})
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#xwayland
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
     },
 })
 
