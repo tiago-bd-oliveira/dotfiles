@@ -42,7 +42,7 @@
     "*.tsx": "typescriptreact",
     "*.ts": "typescript"
   },
-  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "@azure.argTenant": "",
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -84,5 +84,8 @@
   "claudeCode.hideOnboarding": true,
   "csv.maxFileSizeMB": 0,
   "java.configuration.runtimes": [],
-  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
+  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
