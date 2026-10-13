@@ -1,0 +1,6 @@
+[Unit]
+Description=Delete files older than 7 days from ~/Downloads
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/scripts/cleanup_downloads.sh

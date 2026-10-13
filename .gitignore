@@ -16,3 +16,11 @@
 # VS Code junk
 .vscode/extensions/
 .vscode/argv.json
+
+# VS Code runtime data (~/.config/Code is symlinked into the repo) — keep only user config
+vscode/.config/Code/*
+!vscode/.config/Code/User/
+vscode/.config/Code/User/*
+!vscode/.config/Code/User/settings.json
+!vscode/.config/Code/User/keybindings.json
+!vscode/.config/Code/User/snippets/

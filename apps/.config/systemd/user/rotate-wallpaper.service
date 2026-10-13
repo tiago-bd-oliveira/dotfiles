@@ -1,0 +1,8 @@
+[Unit]
+Description=Rotate wallpaper and regenerate pywal theme
+# Only meaningful inside a Hyprland session (hyprland.lua imports this var)
+ConditionEnvironment=HYPRLAND_INSTANCE_SIGNATURE
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/scripts/rotate-wallpaper.sh

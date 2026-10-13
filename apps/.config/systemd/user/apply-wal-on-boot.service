@@ -1,0 +1,8 @@
+[Unit]
+Description=Apply pywal theme for the startup wallpaper
+# Started by hyprland.lua once the session environment is imported
+ConditionEnvironment=HYPRLAND_INSTANCE_SIGNATURE
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/scripts/apply-wal-on-boot.sh
