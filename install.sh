@@ -7,7 +7,7 @@ REPO_URL="https://github.com/tiago-bd-oliveira/dotfiles.git"
 DOTFILES="$HOME/.dotfiles"
 BACKUP="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 STOW_PKGS=(x11 zsh git apps vscode)
-SERVICES=(NetworkManager bluetooth sddm docker cronie)
+SERVICES=(NetworkManager bluetooth sddm docker tlp)
 USER_TIMERS=(rotate-wallpaper cleanup-downloads)   # apps/.config/systemd/user
 
 DO_PACKAGES=1 DO_AUR=1 DO_VSCODE=1
@@ -82,6 +82,8 @@ fi
 
 # ---------------------------------------------------------------- AUR
 if (( DO_AUR )); then
+  # Skip building *-debug packages for AUR installs
+  sudo sed -i -E '/^OPTIONS=/ s/([( ])debug/\1!debug/' /etc/makepkg.conf
   if ! command -v yay >/dev/null; then
     log "Installing yay"
     tmp=$(mktemp -d)

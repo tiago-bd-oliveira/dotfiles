@@ -172,7 +172,6 @@ ZSH_HIGHLIGHT_STYLES[redirection]='fg=214,bold'             # > and >> — orang
 # Clean up the home directory
 export CARGO_HOME="$HOME/.local/share/cargo"
 export GNUPGHOME="$HOME/.local/share/gnupg"
-export NVM_DIR="$HOME/.local/share/nvm"
 
 # fix man output
 export GROFF_NO_SGR=1
