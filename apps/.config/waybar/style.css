@@ -10,7 +10,7 @@
    waybar's reload_style_on_change watcher only registers imports written this
    way, and that watcher is what lets pywal recolor the bar live instead of
    forcing a full reload. */
-@import "/home/tiago/.cache/wal/colors-waybar.css";
+@import "/home/quexumo/.cache/wal/colors-waybar.css";
 
 /* === Main Background === */
 

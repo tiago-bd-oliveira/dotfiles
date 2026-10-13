@@ -1,26 +1,18 @@
 #!/usr/bin/env bash
-# Applies the pywal theme to match whatever wallpaper hyprpaper.conf declares,
-# run once at Hyprland startup. Also seeds rotate-wallpaper.sh's state file so
-# the first rotation won't immediately repeat this wallpaper.
+# Picks a random startup wallpaper and applies the matching pywal theme, run
+# once at Hyprland startup. Delegates to rotate-wallpaper.sh, which sets the
+# wallpaper on every monitor, records it in the state file and runs apply-wal.sh.
 
 set -euo pipefail
 
-HYPRPAPER_CONF="$HOME/.config/hypr/hyprpaper.conf"
-STATE_FILE="$HOME/.cache/hypr/current_wallpaper"
-APPLY_WAL="$HOME/.config/hypr/scripts/apply-wal.sh"
+ROTATE="$HOME/.config/hypr/scripts/rotate-wallpaper.sh"
 
-WALLPAPER=$(grep -m1 -E '^\s*path\s*=' "$HYPRPAPER_CONF" | sed -E 's/^\s*path\s*=\s*//')
-
-if [[ -z "$WALLPAPER" ]]; then
-    echo "Could not find a wallpaper path in $HYPRPAPER_CONF" >&2
-    exit 1
-fi
-
-mkdir -p "$(dirname "$STATE_FILE")"
-echo "$WALLPAPER" > "$STATE_FILE"
-
-# Give hyprpaper/waybar/kitty a moment to actually start before apply-wal.sh
-# tries to reload them
+# Wait for hyprpaper to start, then give it (and waybar/kitty) a moment to be
+# ready for IPC before rotate-wallpaper.sh / apply-wal.sh talk to them
+for _ in {1..20}; do
+    pgrep -x hyprpaper >/dev/null && break
+    sleep 0.5
+done
 sleep 2
 
-"$APPLY_WAL" "$WALLPAPER"
+"$ROTATE"

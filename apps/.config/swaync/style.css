@@ -3,7 +3,7 @@
   active-bg: @active-bg | hover-bg: @hover-bg | critical: @critical
 */
 
-@import url("file:///home/tiago/.cache/wal/colors-swaync.css");
+@import url("file:///home/quexumo/.cache/wal/colors-swaync.css");
 
 * {
   all: unset;

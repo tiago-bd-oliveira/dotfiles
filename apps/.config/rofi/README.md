@@ -35,7 +35,7 @@ rofi -show drun -config ~/.config/rofi/config.rasi
 
 Edit `config.rasi` line 12:
 ```rasi
-@theme "/home/tiago/.local/share/rofi/themes/squared-nord.rasi"
+@theme "/home/quexumo/.local/share/rofi/themes/squared-nord.rasi"
 ```
 
 Available themes in `~/.local/share/rofi/themes/`:

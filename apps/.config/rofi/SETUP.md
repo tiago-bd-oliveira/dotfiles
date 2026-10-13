@@ -60,7 +60,7 @@ rofi -show drun -config ~/.config/rofi/config.rasi
 **Change theme:**
 ```bash
 # Edit config.rasi line 12
-@theme "/home/tiago/.local/share/rofi/themes/nord.rasi"
+@theme "/home/quexumo/.local/share/rofi/themes/nord.rasi"
 ```
 
 **Change color scheme:**

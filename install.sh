@@ -65,10 +65,13 @@ if (( DO_PACKAGES )); then
 
   log "Installing repo packages"
   mapfile -t wanted < <(grep -vE '^\s*(#|$)' "$DOTFILES/system/packages.list")
-  mapfile -t available < <(pacman -Slq | sort -u)
+  # Lookup table, not `printf | grep -q`: grep -q exits early, printf gets
+  # SIGPIPE, and pipefail turns that into a false "not found"
+  declare -A available=()
+  while read -r p; do available[$p]=1; done < <(pacman -Slq)
   repo_pkgs=()
   for p in "${wanted[@]}"; do
-    if printf '%s\n' "${available[@]}" | grep -qxF "$p"; then
+    if [[ -n ${available[$p]-} ]]; then
       repo_pkgs+=("$p")
     else
       EXTRA_AUR+=("$p")   # not in repos, try the AUR later
