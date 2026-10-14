@@ -83,10 +83,18 @@ if [ "$1" == "up" ]; then
       $flatpak_update_cmd
 
       printf '\n--- Updating package lists ---\n'
-      ${aur_helper} -Qqen > ~/.dotfiles/system/packages.list
-      ${aur_helper} -Qqem > ~/.dotfiles/system/aur-packages.list
-      git -C ~/.dotfiles/ commit -am 'Update package lists'
-      git -C ~/.dotfiles/ push
+      # Explicitly installed only: -n repo packages, -m foreign (AUR)
+      pacman -Qqen > ~/.dotfiles/system/packages.list
+      pacman -Qqem > ~/.dotfiles/system/aur-packages.list
+      # Commit just the lists, not whatever else is mid-edit in the repo
+      lists='system/packages.list system/aur-packages.list'
+      if git -C ~/.dotfiles/ diff --quiet -- \$lists; then
+        echo 'Package lists already up to date'
+      else
+        git -C ~/.dotfiles/ diff --stat -- \$lists
+        git -C ~/.dotfiles/ commit -m 'Update package lists' -- \$lists &&
+          git -C ~/.dotfiles/ push
+      fi
 
       printf '\n--- Cleaning up ---\n'
       flatpak uninstall --unused -y

@@ -87,5 +87,6 @@
   "todo-tree.ripgrep.ripgrep": "/usr/bin/rg",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "redhat.telemetry.enabled": false
 }
