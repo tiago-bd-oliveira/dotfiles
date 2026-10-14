@@ -12,6 +12,7 @@ bat
 bind
 bluetui
 bluez
+bluez-tools
 bluez-utils
 breeze
 brightnessctl

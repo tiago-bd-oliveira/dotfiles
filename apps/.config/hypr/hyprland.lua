@@ -16,6 +16,7 @@
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_SCALE_FACTOR", "1")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland:GNOME")
 
 ------------------
 ---- MONITORS ----

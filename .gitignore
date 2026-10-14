@@ -24,3 +24,8 @@ vscode/.config/Code/User/*
 !vscode/.config/Code/User/settings.json
 !vscode/.config/Code/User/keybindings.json
 !vscode/.config/Code/User/snippets/
+
+# OneDrive runtime data — keep only config and sync_list (refresh_token is a secret)
+apps/.config/onedrive/*
+!apps/.config/onedrive/config
+!apps/.config/onedrive/sync_list

@@ -116,8 +116,9 @@ clone https://github.com/zsh-users/zsh-syntax-highlighting.git  "$ZC/plugins/zsh
 # ---------------------------------------------------------------- stow
 log "Linking dotfiles with stow (existing files backed up to $BACKUP)"
 cd "$DOTFILES" || exit 1
-# Pre-create so stow links the unit files, not the whole dir (enable writes into it)
-mkdir -p "$HOME/.config/systemd/user"
+# Pre-create so stow links the files, not the whole dir (systemd enable and
+# onedrive write into these; onedrive keeps its login token there)
+mkdir -p "$HOME/.config/systemd/user" "$HOME/.config/onedrive"
 for pkg in "${STOW_PKGS[@]}"; do
   [[ -d "$pkg" ]] || continue
   while IFS= read -r -d '' f; do
