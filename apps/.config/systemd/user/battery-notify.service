@@ -1,0 +1,6 @@
+[Unit]
+Description=Notify when the battery is at or below 10%
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/scripts/battery-notify.sh

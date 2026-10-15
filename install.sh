@@ -8,7 +8,7 @@ DOTFILES="$HOME/.dotfiles"
 BACKUP="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 STOW_PKGS=(x11 zsh git apps vscode)
 SERVICES=(NetworkManager bluetooth sddm docker tlp)
-USER_TIMERS=(rotate-wallpaper cleanup-downloads)   # apps/.config/systemd/user
+USER_TIMERS=(rotate-wallpaper cleanup-downloads battery-notify)   # apps/.config/systemd/user
 
 DO_PACKAGES=1 DO_AUR=1 DO_VSCODE=1
 for arg in "$@"; do
