@@ -1,0 +1,42 @@
+/* Colors come from wal-engine.py (write_wleave) */
+@import url("file:///home/quexumo/.cache/wal/colors-wleave.css");
+
+window {
+    background-color: alpha(@main-bg, 0.8);
+}
+
+button {
+    color: @main-fg;
+    background-color: @tier1;
+    border: none;
+    border-radius: 12px;
+    margin: 6px;
+    padding: 10px;
+}
+
+button label.action-name {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+button label.keybind {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+button:hover label.keybind,
+button:focus label.keybind {
+    opacity: 1;
+}
+
+/* Icons are SVGs using currentColor, so color recolors them */
+button:focus,
+button:hover {
+    color: @accent;
+    background-color: mix(@tier1, @accent, 0.15);
+}
+
+button:active {
+    color: @main-bg;
+    background-color: @accent;
+}

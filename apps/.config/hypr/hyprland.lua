@@ -82,6 +82,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
 
     hl.exec_cmd("hypridle")
+    hl.exec_cmd("wleave --service") -- stays in background so SUPER+Q opens instantly
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("hyprsunset")
@@ -318,7 +319,8 @@ hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/clipboard.sh"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/wifi-menu.sh"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("$HOME/.config/rofi/scripts/bluetooth-menu.sh"))
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("wleave"))
+-- Wake the background wleave over D-Bus (~40ms); fall back to a cold start if it isn't running
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("gdbus call --session --dest sh.natty.Wleave --object-path /sh/natty/Wleave --method org.freedesktop.Application.Activate '{}' || wleave"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a")) -- color picker
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))

@@ -43,6 +43,13 @@ fi
 
 # Rofi: no reload needed, it reads its theme fresh on every launch
 
+# Wleave: runs as a background service (hyprland.lua) and only reads its CSS at
+# startup, so restart it. Spawn through Hyprland rather than directly — when
+# run from the systemd timer, the oneshot unit would kill it on exit.
+if pkill -x wleave 2>/dev/null && command -v hyprctl >/dev/null 2>&1; then
+    hyprctl dispatch 'hl.dsp.exec_cmd("wleave --service")' >/dev/null 2>&1 || true
+fi
+
 # SwayNC: reload its CSS live
 if command -v swaync-client >/dev/null 2>&1; then
     swaync-client -rs 2>/dev/null || true
