@@ -10,6 +10,7 @@ base
 base-devel
 bat
 bind
+blueman
 bluetui
 bluez
 bluez-tools
@@ -33,6 +34,7 @@ cpupower
 ctop
 dialog
 discord
+dnsmasq
 docker
 docker-buildx
 docker-compose
@@ -93,6 +95,7 @@ lazydocker
 lib32-libx11
 lib32-nss
 libva-intel-driver
+libvirt
 libvpl
 libwebp-utils
 linux
@@ -136,6 +139,7 @@ python-mcp
 python-pipx
 qbittorrent
 qemu-desktop
+qemu-full
 qgis
 qt5-graphicaleffects
 qt5-imageformats
@@ -186,6 +190,7 @@ unzip
 uv
 valkey
 vim
+virt-manager
 vpl-gpu-rt
 vulkan-intel
 waybar
